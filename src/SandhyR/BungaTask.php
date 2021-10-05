@@ -16,7 +16,6 @@ class BungaTask extends Task{
     public function onRun(int $currentTick)
     {
         $hour = date('H');
-        var_dump($hour);
         if($hour == 00){
             $allmoney = $this->plugin->getDatabase()->query("SELECT money FROM bank");
             $allmoney = mysqli_fetch_row($allmoney);
