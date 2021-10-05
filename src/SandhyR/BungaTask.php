@@ -23,7 +23,7 @@ class BungaTask extends Task{
             foreach($allmoney as $playersmoney){
                 $persentase = 1 / 100;
                 $money = $playersmoney * $persentase;
-                $money = $allmoney - $money;
+                $money = $playersmoney - $money;
                 $this->plugin->getDatabase()->query("UPDATE bank SET money=$money");
             }
         }
